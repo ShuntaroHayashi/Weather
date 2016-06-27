@@ -3,7 +3,7 @@ $result;
 if (isset($_GET["citycode"])) {
   $citycode = $_GET["citycode"];
   if ($citycode==="") {
-
+    header("Location: index.php");
   } else {
     $base_url = 'http://weather.livedoor.com/forecast/webservice/json/v1';
     $query = ['city'=>$citycode];
